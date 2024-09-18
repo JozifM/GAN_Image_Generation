@@ -62,7 +62,7 @@ class Generator(nn.Module):
             nn.BatchNorm2d(self.channel_size * 4),
             nn.ReLU(True),
 
-            # State size: (channel_size*2) x 32 x 32
+            # State size: (channel_size*2) x 32 x 32 
             nn.ConvTranspose2d(self.channel_size * 4, self.channel_size * 2, 4, 2, 1, bias=False),
             nn.BatchNorm2d(self.channel_size*2),
             nn.ReLU(True),
